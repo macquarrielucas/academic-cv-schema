@@ -258,6 +258,10 @@
           "summary": {
             "type": "string",
             "description": "e.g. Received for my work with Quantum Physics"
+          },
+          "money": {
+            "type": "string",
+            "description": "e.g $40 000"
           }
         }
       }
@@ -287,6 +291,51 @@
             "description": "e.g. CNCF"
           }
         }
+      }
+    },
+    "research_experience": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the research project"
+          },
+          "startDate": {
+            "$ref": "#/definitions/iso8601",
+            "description": "Start date of the research"
+          },
+          "endDate": {
+            "$ref": "#/definitions/iso8601",
+            "description": "End date of the research"
+          },
+          "organization": {
+            "type": "string",
+            "url": "uri",
+            "description": "The organization or institution where the research was conducted"
+          },
+          "supervisor": {
+            "type": "string",
+            "description": "The name of your supervisor or principal investigator"
+          },
+          "summary": {
+            "type": "string",
+            "description": "A brief summary of the research project"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "List of notable achievements or contributions during the research",
+            "items": {
+              "type": "string",
+              "description": "A single highlight or achievement"
+            },
+            "additionalItems": false
+          }
+        },
+        "required": ["title", "startDate", "organization"]
       }
     },
     "publications": {
@@ -408,6 +457,109 @@
         }
       }
     },
+    "presentations": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the presentation"
+          },
+          "event": {
+            "type": "string",
+            "description": "Event where the presentation was delivered, e.g., a conference or seminar"
+          },
+          "url": {
+            "type": "string",
+            "description": "Link to the presentation or event details, if available",
+            "format": "uri"
+          },
+          "date": {
+            "$ref": "#/definitions/iso8601",
+            "description": "Date of the presentation in ISO 8601 format"
+          },
+          "description": {
+            "type": "string",
+            "description": "A brief summary or description of the presentation"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location of the presentation, e.g., 'Paris, France' or 'Virtual'"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Specify key points, achievements, or audience feedback",
+            "additionalItems": false,
+            "items": {
+              "type": "string",
+              "description": "e.g., 'Invited speaker at the annual mathematics conference'"
+            }
+          }
+        },
+        "required": ["title", "event", "date"]
+      }
+    },
+    "teaching_experience": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "position": {
+            "type": "string",
+            "description": "Title of the teaching role, e.g., 'Teaching Assistant', 'Tutor', or 'Instructor'"
+          },
+          "institution": {
+            "type": "string",
+            "description": "Name of the institution or organization, e.g., 'University of Western Ontario'"
+          },
+          "url": {
+            "type": "string",
+            "description": "Link to the institution, program, or relevant webpage",
+            "format": "uri"
+          },
+          "startDate": {
+            "$ref": "#/definitions/iso8601",
+            "description": "Start date of the teaching role in ISO 8601 format"
+          },
+          "endDate": {
+            "$ref": "#/definitions/iso8601",
+            "description": "End date of the teaching role in ISO 8601 format"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location where the teaching occurred, e.g., 'Toronto, Canada' or 'Virtual'"
+          },
+          "description": {
+            "type": "string",
+            "description": "Brief overview of the teaching responsibilities"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Notable achievements or responsibilities in the role",
+            "additionalItems": false,
+            "items": {
+              "type": "string",
+              "description": "e.g., 'Led weekly tutorials for 30 students on advanced calculus'"
+            }
+          },
+          "subjects": {
+            "type": "array",
+            "description": "List of subjects or topics taught",
+            "additionalItems": false,
+            "items": {
+              "type": "string",
+              "description": "e.g., 'Linear Algebra', 'Mathematical Modeling'"
+            }
+          }
+        },
+        "required": ["position", "institution", "startDate"]
+      }
+    },
     "projects": {
       "type": "array",
       "description": "Specify career projects",
@@ -471,6 +623,55 @@
             "description": " e.g. 'volunteering', 'presentation', 'talk', 'application', 'conference'"
           }
         }
+      }
+    },
+    "community_involvement": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "organization": {
+            "type": "string",
+            "description": "The name of the organization or community group involved"
+          },
+          "role": {
+            "type": "string",
+            "description": "Your role or title within the organization (e.g., 'Volunteer', 'Event Coordinator')"
+          },
+          "url": {
+            "type": "string",
+            "description": "Link to the organization or project, if applicable",
+            "format": "uri"
+          },
+          "startDate": {
+            "$ref": "#/definitions/iso8601",
+            "description": "The date when you started this community involvement, in ISO 8601 format"
+          },
+          "endDate": {
+            "$ref": "#/definitions/iso8601",
+            "description": "The date when you ended this community involvement, in ISO 8601 format"
+          },
+          "location": {
+            "type": "string",
+            "description": "The location where this involvement occurred, or 'Virtual' if applicable"
+          },
+          "description": {
+            "type": "string",
+            "description": "A brief description of your responsibilities and activities"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Key achievements or contributions during this involvement",
+            "additionalItems": false,
+            "items": {
+              "type": "string",
+              "description": "e.g., 'Coordinated a fundraising event that raised $2,000 for charity'"
+            }
+          }
+        },
+        "required": ["organization", "role", "startDate"]
       }
     },
     "meta": {
