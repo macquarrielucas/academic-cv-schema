@@ -148,46 +148,49 @@
         }
       }
     },
-    "volunteer": {
+    "research_experience": {
       "type": "array",
       "additionalItems": false,
       "items": {
         "type": "object",
         "additionalProperties": true,
         "properties": {
-          "organization": {
+          "title": {
             "type": "string",
-            "description": "e.g. Facebook"
-          },
-          "position": {
-            "type": "string",
-            "description": "e.g. Software Engineer"
-          },
-          "url": {
-            "type": "string",
-            "description": "e.g. http://facebook.example.com",
-            "format": "uri"
+            "description": "Title of the research project"
           },
           "startDate": {
-            "$ref": "#/definitions/iso8601"
+            "$ref": "#/definitions/iso8601",
+            "description": "Start date of the research"
           },
           "endDate": {
-            "$ref": "#/definitions/iso8601"
+            "$ref": "#/definitions/iso8601",
+            "description": "End date of the research"
+          },
+          "organization": {
+            "type": "string",
+            "url": "uri",
+            "description": "The organization or institution where the research was conducted"
+          },
+          "supervisor": {
+            "type": "string",
+            "description": "The name of your supervisor or principal investigator"
           },
           "summary": {
             "type": "string",
-            "description": "Give an overview of your responsibilities at the company"
+            "description": "A brief summary of the research project"
           },
           "highlights": {
             "type": "array",
-            "description": "Specify accomplishments and achievements",
-            "additionalItems": false,
+            "description": "List of notable achievements or contributions during the research",
             "items": {
               "type": "string",
-              "description": "e.g. Increased profits by 20% from 2011-2012 through viral advertising"
-            }
+              "description": "A single highlight or achievement"
+            },
+            "additionalItems": false
           }
-        }
+        },
+        "required": ["title", "startDate", "organization"]
       }
     },
     "education": {
@@ -317,51 +320,6 @@
         }
       }
     },
-    "research_experience": {
-      "type": "array",
-      "additionalItems": false,
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "Title of the research project"
-          },
-          "startDate": {
-            "$ref": "#/definitions/iso8601",
-            "description": "Start date of the research"
-          },
-          "endDate": {
-            "$ref": "#/definitions/iso8601",
-            "description": "End date of the research"
-          },
-          "organization": {
-            "type": "string",
-            "url": "uri",
-            "description": "The organization or institution where the research was conducted"
-          },
-          "supervisor": {
-            "type": "string",
-            "description": "The name of your supervisor or principal investigator"
-          },
-          "summary": {
-            "type": "string",
-            "description": "A brief summary of the research project"
-          },
-          "highlights": {
-            "type": "array",
-            "description": "List of notable achievements or contributions during the research",
-            "items": {
-              "type": "string",
-              "description": "A single highlight or achievement"
-            },
-            "additionalItems": false
-          }
-        },
-        "required": ["title", "startDate", "organization"]
-      }
-    },
     "publications": {
       "type": "array",
       "description": "Specify your publications through your career",
@@ -389,115 +347,6 @@
           "summary": {
             "type": "string",
             "description": "Short summary of publication. e.g. Discussion of the World Wide Web, HTTP, HTML."
-          }
-        }
-      }
-    },
-    "skills": {
-      "type": "array",
-      "description": "List out your professional skill-set",
-      "additionalItems": false,
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "e.g. Web Development"
-          },
-          "level": {
-            "type": "string",
-            "description": "e.g. Master"
-          },
-          "keywords": {
-            "type": "array",
-            "description": "List some keywords pertaining to this skill",
-            "additionalItems": false,
-            "items": {
-              "type": "string",
-              "description": "e.g. HTML"
-            }
-          }
-        }
-      }
-    },
-    "languages": {
-      "type": "array",
-      "description": "List any other languages you speak",
-      "additionalItems": false,
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "language": {
-            "type": "string",
-            "description": "e.g. English, Spanish"
-          },
-          "fluency": {
-            "type": "string",
-            "description": "e.g. Fluent, Beginner"
-          }
-        }
-      }
-    },
-    "interests": {
-      "type": "array",
-      "additionalItems": false,
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "e.g. Philosophy"
-          },
-          "description" : {
-            "type" : "string",
-            "description" : "Description of the activity/interest e.g I write blog posts about philosphy." 
-          },
-          "keywords": {
-            "type": "array",
-            "additionalItems": false,
-            "items": {
-              "type": "string",
-              "description": "e.g. Friedrich Nietzsche"
-            }
-          }
-        }
-      }
-    },
-    "references": {
-      "type": "array",
-      "description": "List references you have received",
-      "additionalItems": false,
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "e.g. Timothy Cook"
-          },
-          "reference": {
-            "type": "string",
-            "description": "e.g. Joe blogs was a great employee, who turned up to work at least once a week. He exceeded my expectations when it came to doing nothing."
-          },
-          "relationship": {
-            "type" : "string",
-            "description": "The relationship to you e.g. Supervisor"
-          },
-          "email": {
-            "type": "string",
-            "format": "email",
-            "description": "Contact email e.g. user@site.com"
-          },
-          "phoneNumber": {
-            "type": "string",
-            "description": "e.g. 902-123-4545, 010-1234-5678"
-          },
-          "website": {
-            "type": "string",
-            "format": "uri"
           }
         }
       }
@@ -717,6 +566,157 @@
           }
         },
         "required": ["organization", "role", "startDate"]
+      }
+    },
+    "volunteer": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "organization": {
+            "type": "string",
+            "description": "e.g. Facebook"
+          },
+          "position": {
+            "type": "string",
+            "description": "e.g. Software Engineer"
+          },
+          "url": {
+            "type": "string",
+            "description": "e.g. http://facebook.example.com",
+            "format": "uri"
+          },
+          "startDate": {
+            "$ref": "#/definitions/iso8601"
+          },
+          "endDate": {
+            "$ref": "#/definitions/iso8601"
+          },
+          "summary": {
+            "type": "string",
+            "description": "Give an overview of your responsibilities at the company"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Specify accomplishments and achievements",
+            "additionalItems": false,
+            "items": {
+              "type": "string",
+              "description": "e.g. Increased profits by 20% from 2011-2012 through viral advertising"
+            }
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "List out your professional skill-set",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. Web Development"
+          },
+          "level": {
+            "type": "string",
+            "description": "e.g. Master"
+          },
+          "keywords": {
+            "type": "array",
+            "description": "List some keywords pertaining to this skill",
+            "additionalItems": false,
+            "items": {
+              "type": "string",
+              "description": "e.g. HTML"
+            }
+          }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "description": "List any other languages you speak",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "e.g. English, Spanish"
+          },
+          "fluency": {
+            "type": "string",
+            "description": "e.g. Fluent, Beginner"
+          }
+        }
+      }
+    },
+    "interests": {
+      "type": "array",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. Philosophy"
+          },
+          "description" : {
+            "type" : "string",
+            "description" : "Description of the activity/interest e.g I write blog posts about philosphy." 
+          },
+          "keywords": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {
+              "type": "string",
+              "description": "e.g. Friedrich Nietzsche"
+            }
+          }
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "description": "List references you have received",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. Timothy Cook"
+          },
+          "reference": {
+            "type": "string",
+            "description": "e.g. Joe blogs was a great employee, who turned up to work at least once a week. He exceeded my expectations when it came to doing nothing."
+          },
+          "relationship": {
+            "type" : "string",
+            "description": "The relationship to you e.g. Supervisor"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Contact email e.g. user@site.com"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "e.g. 902-123-4545, 010-1234-5678"
+          },
+          "website": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
       }
     },
     "meta": {
