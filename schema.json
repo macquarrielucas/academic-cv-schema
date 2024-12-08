@@ -427,6 +427,10 @@
             "type": "string",
             "description": "e.g. Philosophy"
           },
+          "description" : {
+            "type" : "string",
+            "description" : "Description of the activity/interest e.g I write blog posts about philosphy." 
+          },
           "keywords": {
             "type": "array",
             "additionalItems": false,
@@ -453,6 +457,23 @@
           "reference": {
             "type": "string",
             "description": "e.g. Joe blogs was a great employee, who turned up to work at least once a week. He exceeded my expectations when it came to doing nothing."
+          },
+          "relationship": {
+            "type" : "string",
+            "description": "The relationship to you e.g. Supervisor"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Contact email e.g. user@site.com"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "e.g. 902-123-4545, 010-1234-5678"
+          },
+          "website": {
+            "type": "string",
+            "format": "uri"
           }
         }
       }
