@@ -226,13 +226,32 @@
           },
           "courses": {
             "type": "array",
-            "description": "List notable courses/subjects",
+            "description": "List of courses",
             "additionalItems": false,
             "items": {
-              "type": "string",
-              "description": "e.g. H1302 - Introduction to American history"
+              "type": "object",
+              "properties": {
+                "courseName": {
+                  "type": "string",
+                  "description": "Full name of the course, e.g., 'Introduction to Linguistics'"
+                },
+                "subject": {
+                  "type": "string",
+                  "description": "Subject code, e.g., 'ANTHRO' or 'APPLMATH'"
+                },
+                "score": {
+                  "type": "string",
+                  "description": "Grade achieved in the course, e.g., '086'"
+                },
+                "term": {
+                  "type": "string",
+                  "description": "Term in which the course was taken, e.g., '2021 Fall/Winter'"
+                }
+              },
+              "required": ["courseName", "subject", "score"]
             }
           }
+
         }
       }
     },
