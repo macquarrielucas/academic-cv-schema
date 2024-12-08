@@ -241,7 +241,13 @@
                 },
                 "score": {
                   "type": "string",
-                  "description": "Grade achieved in the course, e.g., '086'"
+                  "description": "Grade achieved in the course, e.g., '86', 'WITHDRAW', 'FAIL'."
+                },
+                "averageScore" : {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100,
+                  "description": "Average grade of the course e.g. '75'." 
                 },
                 "term": {
                   "type": "string",
@@ -251,7 +257,6 @@
               "required": ["courseName", "subject", "score"]
             }
           }
-
         }
       }
     },
