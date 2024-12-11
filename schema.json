@@ -328,9 +328,47 @@
         "type": "object",
         "additionalProperties": true,
         "properties": {
-          "name": {
+          "title": {
             "type": "string",
             "description": "e.g. The World Wide Web"
+          },
+          "authors": {
+            "type": "array",
+            "description": "Each author of the paper",
+            "additionalItems": false,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the author e.g., John Doe"
+                },
+                "affiliation": {
+                  "type": "string",
+                  "description": "Affiliation of the author, e.g., 'University of Example'"
+                },
+                "email": {
+                  "type": "string",
+                  "description": "Email address of the author",
+                  "format": "email"
+                },
+                "orcid": {
+                  "type": "string",
+                  "description": "ORCID identifier of the author",
+                  "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{4}$"
+                },
+                "role": {
+                  "type": "string",
+                  "description": "Role of the author in the paper, e.g., 'Lead Author', 'Co-Author', 'Reviewer'"
+                },
+                "contributions": {
+                  "type": "string",
+                  "description": "Description of the author's contributions, e.g., 'Conceptualization, Writing - Original Draft'"
+                }
+              },
+              "required": ["name"]
+            }
           },
           "publisher": {
             "type": "string",
