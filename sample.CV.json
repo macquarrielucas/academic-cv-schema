@@ -1,161 +1,219 @@
+
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "$schema": "http://example.com/example.json",
   "basics": {
-    "name": "Richard Hendriks",
-    "label": "Programmer",
-    "image": "",
-    "email": "richard.hendriks@mail.com",
-    "phone": "(912) 555-4321",
-    "url": "http://richardhendricks.example.com",
-    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
+    "name": "Thomas Anderson",
+    "label": "Software Engineer",
+    "image": "https://example.com/profile.jpg",
+    "email": "thomas.anderson@example.com",
+    "phone": "+1-555-123-4567",
+    "url": "https://thomas.dev",
+    "summary": "Passionate software engineer with a focus on distributed systems and AI.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "1234 Elm Street\nApt 56",
+      "postalCode": "94025",
+      "city": "Menlo Park",
       "countryCode": "US",
       "region": "California"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "neutralthoughts",
-        "url": "https://www.twitter.com"
+        "network": "LinkedIn",
+        "username": "thomas-anderson",
+        "url": "https://linkedin.com/in/thomas-anderson"
       },
       {
-        "network": "SoundCloud",
-        "username": "dandymusicnl",
-        "url": "https://soundcloud.example.com/dandymusicnl"
+        "network": "GitHub",
+        "username": "neo",
+        "url": "https://github.com/neo"
       }
     ]
   },
   "work": [
     {
-      "name": "Pied Piper",
-      "location": "Palo Alto, CA",
-      "description": "Awesome compression company",
-      "position": "CEO/President",
-      "url": "http://piedpiper.example.com",
-      "startDate": "2013-12-01",
-      "endDate": "2014-12-01",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "name": "Facebook",
+      "location": "Menlo Park, CA",
+      "description": "Social Media Company",
+      "position": "Senior Software Engineer",
+      "url": "https://facebook.com",
+      "startDate": "2019-05",
+      "endDate": "2023-04",
+      "summary": "Worked on large-scale backend systems supporting billions of users.",
       "highlights": [
-        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-        "Successfully won Techcrunch Disrupt",
-        "Optimized an algorithm that holds the current world record for Weisman Scores"
+        "Led the migration to a microservices architecture",
+        "Optimized data pipelines to reduce latency by 40%"
       ]
     }
   ],
-  "volunteer": [
+  "research_experience": [
     {
-      "organization": "CoderDojo",
-      "position": "Teacher",
-      "url": "http://coderdojo.example.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Global movement of free coding clubs for young people.",
+      "title": "Distributed AI Systems",
+      "startDate": "2018-01",
+      "endDate": "2019-04",
+      "organization": "MIT CSAIL",
+      "supervisor": "Prof. John Doe",
+      "summary": "Research on scaling federated learning algorithms.",
       "highlights": [
-        "Awarded 'Teacher of the Month'"
+        "Developed new model aggregation techniques",
+        "Published 2 papers in top conferences"
       ]
     }
   ],
   "education": [
     {
-      "institution": "University of Oklahoma",
-      "url": "https://www.ou.edu/",
-      "area": "Information Technology",
+      "institution": "Massachusetts Institute of Technology",
+      "url": "https://web.mit.edu",
+      "area": "Computer Science",
       "studyType": "Bachelor",
-      "startDate": "2011-06-01",
-      "endDate": "2014-01-01",
-      "score": "4.0",
+      "startDate": "2012",
+      "endDate": "2016",
+      "score": "3.9/4.0",
       "courses": [
-        "DB1101 - Basic SQL",
-        "CS2011 - Java Introduction"
+        {
+          "courseName": "Introduction to Algorithms",
+          "subject": "CS",
+          "score": "A",
+          "averageScore": 90,
+          "term": "2013 Fall"
+        },
+        {
+          "courseName": "Distributed Systems",
+          "subject": "CS",
+          "score": "A",
+          "averageScore": 93,
+          "term": "2014 Spring"
+        }
       ]
     }
   ],
   "awards": [
     {
-      "title": "Digital Compression Pioneer Award",
-      "date": "2014-11-01",
-      "awarder": "Techcrunch",
-      "summary": "There is no spoon."
+      "title": "Best Engineer of the Year",
+      "date": "2022",
+      "awarder": "TechCorp",
+      "summary": "Recognized for significant contributions to backend engineering",
+      "money": "$10,000"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified Kubernetes Administrator",
+      "date": "2021",
+      "url": "https://ckad.io/certificate",
+      "issuer": "CNCF"
     }
   ],
   "publications": [
     {
-      "name": "Video compression for 3d media",
-      "publisher": "Hooli",
-      "releaseDate": "2014-10-01",
-      "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
-      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+      "title": "Scalable Federated Learning",
+      "authors": [
+        {
+          "name": "Thomas Anderson",
+          "affiliation": "MIT",
+          "email": "thomas.anderson@example.com",
+          "orcid": "0000-0001-2345-6789",
+          "role": "Lead Author",
+          "contributions": "Algorithm design and implementation"
+        }
+      ],
+      "publisher": "IEEE",
+      "releaseDate": "2019",
+      "url": "https://ieee.org/example-publication",
+      "summary": "Discusses scalable federated learning in production environments."
+    }
+  ],
+  "presentations": [
+    {
+      "title": "Building Scalable Microservices",
+      "event": "TechConf 2022",
+      "url": "https://techconf2022.com/talks/microservices",
+      "date": "2022-06",
+      "description": "Presented best practices in microservices architecture",
+      "location": "San Francisco, CA",
+      "highlights": [
+        "Invited speaker at the annual technology conference"
+      ]
+    }
+  ],
+  "teaching_experience": [
+    {
+      "position": "Teaching Assistant",
+      "institution": "MIT",
+      "url": "https://mit.edu",
+      "startDate": "2015-09",
+      "endDate": "2016-06",
+      "location": "Cambridge, MA",
+      "description": "Assisted in teaching distributed systems",
+      "highlights": ["Led weekly tutorials", "Prepared course materials"],
+      "subjects": ["Distributed Systems", "Algorithms"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Open-Source Distributed Database",
+      "description": "An open-source database designed for horizontal scalability.",
+      "highlights": [
+        "Implemented Raft consensus protocol",
+        "Achieved 99.99% uptime"
+      ],
+      "keywords": ["Go", "Raft", "Distributed Systems"],
+      "startDate": "2020-01",
+      "endDate": "2021-12",
+      "url": "https://github.com/neo/distributed-db",
+      "roles": ["Lead Developer"],
+      "entity": "OpenSourceOrg",
+      "type": "application"
+    }
+  ],
+  "community_involvement": [
+    {
+      "organization": "Code for Good",
+      "role": "Volunteer Developer",
+      "url": "https://codeforgood.org",
+      "startDate": "2021-01",
+      "endDate": "2021-12",
+      "location": "Virtual",
+      "description": "Built open-source tools for non-profits",
+      "highlights": ["Developed a donation tracking platform"]
     }
   ],
   "skills": [
     {
       "name": "Web Development",
-      "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript"
-      ]
-    },
-    {
-      "name": "Compression",
-      "level": "Master",
-      "keywords": [
-        "Mpeg",
-        "MP4",
-        "GIF"
-      ]
+      "level": "Expert",
+      "keywords": ["HTML", "CSS", "JavaScript"]
     }
   ],
   "languages": [
     {
       "language": "English",
-      "fluency": "Native speaker"
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Intermediate"
     }
   ],
   "interests": [
     {
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
+      "name": "Philosophy",
+      "description": "I write blog posts about philosophy.",
+      "keywords": ["Nietzsche", "Existentialism"]
     }
   ],
   "references": [
     {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
-    }
-  ],
-  "projects": [
-    {
-      "name": "Miss Direction",
-      "description": "A mapping engine that misguides you",
-      "highlights": [
-        "Won award at AIHacks 2016",
-        "Built by all women team of newbie programmers",
-        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
-      ],
-      "keywords": [
-        "GoogleMaps", "Chrome Extension", "Javascript"
-      ],
-      "startDate": "2016-08-24",
-      "endDate": "2016-08-24",
-      "url": "http://missdirection.example.com",
-      "roles": [
-        "Team lead", "Designer"
-      ],
-      "entity": "Smoogle",
-      "type": "application"
+      "name": "Timothy Cook",
+      "reference": "Thomas is a highly skilled engineer and team player.",
+      "relationship": "Manager",
+      "email": "timothy.cook@example.com",
+      "phoneNumber": "555-987-6543",
+      "website": "https://example.com"
     }
   ],
   "meta": {
-    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/sample.resume.json",
+    "canonical": "https://example.com/resume-schema",
     "version": "v1.0.0",
-    "lastModified": "2017-12-24T15:53:00"
+    "lastModified": "2023-04-15T12:00:00"
   }
 }
