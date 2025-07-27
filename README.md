@@ -1,106 +1,32 @@
-# JSON Resume Schema
+# JSON Academic CV Schema
 
-[![GitHub Releases](https://badgen.net/github/tag/jsonresume/resume-schema)](https://github.com/jsonresume/resume-schema/releases)
-[![NPM Release](https://badgen.net/npm/v/resume-schema)](https://www.npmjs.com/package/resume-schema)
-[![Latest Status](https://github.com/jsonresume/resume-schema/workflows/Latest/badge.svg)](https://github.com/vanillawc/wc-template/actions)
-[![Release Status](https://github.com/jsonresume/resume-schema/workflows/Release/badge.svg)](https://github.com/vanillawc/wc-template/actions)
+### Introduction 
 
-[![](https://dcbadge.limes.pink/api/server/GTZtn8pTXC)](https://discord.gg/GTZtn8pTXC)
+JSON Academic CV Schema is a JSON schema (think template) that academics can use to contain all the information needed to generate their CV. This is a fork of the [jsonresume-schema](https://github.com/jsonresume/resume-schema) repository which was modified for academic CVs
 
-Standard, Specification, Schema
+You can use the Academic CV schema for creating your own academic CV json file. You can then reference this json file whenever you create your CVs, websites, or online profiles making it a good place to store and organize all your academic achievements. 
 
-## Important Note  
+The project also includes validators which can be used to ensure all your data is correctly specified and no errors have been made.
 
-The current working version of the schema is `v1.0.0` that is represented by the `master` branch and the files `schema.json` and `sample.resume.json`. 
-
-All PR's for the next version should be made against the `develop` branch. 
-
-This enforces that the schema package always has the official stable release of the schema.
-
-### Homepage and Registry
-
-If you are looking for the homepage, registry, tooling or themes, see the JSON Resume monorepo
-
-[@jsonresume/jsonresume.org](https://github.com/jsonresume/jsonresume.org/)
- 
+The schema is contained in `schema.json`. You can copy and paste the code into [a json schema viewer](https://navneethg.github.io/jsonschemaviewer/) to visualize the schema.
 
 ### Getting started
 
+I suggest forking this project then creating your own CV `json` file by copying and editing `sample.CV.json`. As you create your `json` CV, ensure that your entries are valid using the validator. 
+
+#### Using the validator
+
+To validate your CV, ensure it is named `CV.json` and saved in the same folder as `validate.js`. Ensure you have `npm` installed then download the `schema` package by entering the following into your terminal
 ```
 npm install --save @jsonresume/schema
 ```
 
-To use
+Next run the `validate.js` script 
 
-```js
-import resumeSchema from '@jsonresume/schema';
-resumeSchema.validate(
-  { basics: { name: "Thomas" } },
-  function (err, report) {
-    if (err) {
-      console.error("The resume was invalid:", err);
-      return;
-    }
-    console.log("Resume validated successfully:", report);
-  },
-  function (err) {
-    console.error("The resume was invalid:", err);
-  }
-);
 ```
-
-Or against a full `resume.json`
-
-```js
-import fs = require('fs');
-import schema from 'resume-schema';
-const resumeObject = JSON.parse(fs.readFileSync('./resume.json', 'utf8'));
-resumeSchema.validate(resumeObject);
+node validate.js
 ```
-
-The JSON Resume schema is available from:
-
-```js
-require("resume-schema").schema;
-```
-
+which will return either a success or failure message.
 ### Contribute
 
-We encourage anyone who's interested in participating in the formation of this standard to join the discussions [here on GitHub](https://github.com/jsonresume/resume-schema/issues). Also feel free to fork this project and submit new ideas to add to the JSON Resume Schema standard. To make sure all formatting is kept in check, please install the [EditorConfig plugin](http://editorconfig.org/) for your editor of choice.
-
-### Versioning
-
-JSON Resume Schema adheres to Semantic Versioning 2.0.0. If there is a violation of
-this scheme, report it as a bug. Specifically, if a patch or minor version is
-released and breaks backward compatibility, that version should be immediately
-yanked and/or a new version should be immediately released that restores
-compatibility. Any change that breaks the public API will only be introduced at
-a major-version release. As a result of this policy, you can (and should)
-specify any dependency on JSON Resume Schema by using the Pessimistic Version
-Constraint with two digits of precision.
-
-We use automatic semver system.
-
-Pull requests titles should be formatted as such
-
-```
-"fix: added something" - will bump the patch version
-"feat: added something" - will bump the minor version
-```
-
-`major` version bumps will be few and far between for this schema.
-
-### Job Description Schema
-
-A draft schema for job descriptions is available in this project as well. It is not yet finalized, but we encourage you to check it out and provide feedback. See `job-schema.json` and `sample.job.json`.
-
-The JSON Job schema is available from:
-
-```js
-require("resume-schema").jobSchema;
-```
-
-### Other resume standards
-
-- [HR-XML](https://schemas.liquid-technologies.com/HR-XML/2007-04-15/)
-- [Europass](http://europass.cedefop.europa.eu/about-europass)
+Feel free to submit and issue or fork this project to do what you like. If you have any feedback about the project I'm happy to talk.

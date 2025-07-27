@@ -1,5 +1,5 @@
 'use strict';
-const schema = require('./schema');
+const schema = require('./CV_schema');
 const Validator = require('jsonschema').Validator;
 
 function validate(resumeJson, callback) {

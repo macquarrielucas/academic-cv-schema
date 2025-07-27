@@ -1,9 +1,9 @@
 {
-  "name": "@jsonresume/schema",
-  "version": "1.1.2",
-  "description": "JSON Resume Schema",
+  "name": "academic-cv-json-schema",
+  "version": "1.0",
+  "description": "A JSON schema for academic CVs",
   "private": false,
-  "main": "validator.js",
+  "main": "validate.js",
   "scripts": {
     "test": "npm run validate && npm run test-units",
     "validate": "ajv validate -s node_modules/json-metaschema/draft-07-schema -d schema",
@@ -13,18 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jsonresume/resume-schema.git"
+    "url": "https://github.com/macquarrielucas/academic-cv-schema.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jsonresume/resume-schema/issues"
+    "url": "https://github.com/macquarrielucas/academic-cv-schema/issues"
   },
   "files": [
-    "sample.resume.json",
-    "sample.job.json",
-    "schema.json",
-    "job-schema.json",
-    "validator.js"
+    "sample_CV.json",
+    "CV_schema.json",
+    "validator.js",
+    "validate.js"
   ],
   "dependencies": {
     "jsonschema": "^1.4.1"
