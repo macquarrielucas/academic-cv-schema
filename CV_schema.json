@@ -258,7 +258,12 @@
                 },
                 "note": {
                   "type": "string",
-                  "descriptions": "Any notes about the course, e.g., 'Graduate level course at John Doe University'"
+                  "description": "Any notes about the course, e.g., 'Graduate level course at John Doe University'"
+                },
+                "link":{
+                  "type" : "string",
+                  "description": "Link to where one can find more information on the course. ",
+                  "format": "uri"
                 }
               },
               "required": ["courseName", "subject", "score"]
