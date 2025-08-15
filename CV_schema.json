@@ -255,6 +255,10 @@
                 "term": {
                   "type": "string",
                   "description": "Term in which the course was taken, e.g., '2021 Fall/Winter'"
+                },
+                "note": {
+                  "type": "string",
+                  "descriptions": "Any notes about the course, e.g., 'Graduate level course at John Doe University'"
                 }
               },
               "required": ["courseName", "subject", "score"]
